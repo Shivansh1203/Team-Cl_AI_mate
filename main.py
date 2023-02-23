@@ -2,7 +2,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 import numpy as np
-pip install tensorflow
+import keras
 import tensorflow as tf
 import streamlit as st
 # from PIL import Image
