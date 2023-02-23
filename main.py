@@ -15,7 +15,7 @@ st.title("Sample websapp")
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model = tf.keras.models.load_model('/content/ann_youtubeadview.h5')
+  model = tf.keras.models.load_model('content/ann_youtubeadview.h5')
   return model
 
 with st.spinner('Loading Model Into Memory....'):
