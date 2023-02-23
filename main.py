@@ -8,7 +8,7 @@ import keras
 import pandas as pd
 import tensorflow as tf
 import streamlit as st
-from plotly import graph_objs as go
+
 from prophet.plot import *
 from prophet.serialize import model_to_json, model_from_json
 # from PIL import Image
