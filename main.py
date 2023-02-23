@@ -21,6 +21,7 @@ def load_model():
 with st.spinner('Loading Model Into Memory....'):
   model = load_model()
 
+st.title("Sample websapp")
 
 # def decode_img(image):
 #   img = tf.image.decode_jpeg(image, channels=3)  
