@@ -2,11 +2,12 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 import numpy as np
+!pip install tensorflow
 import tensorflow as tf
 import streamlit as st
-from PIL import Image
-import requests
-from io import BytesIO
+# from PIL import Image
+# import requests
+# from io import BytesIO
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title("Sample websapp")
