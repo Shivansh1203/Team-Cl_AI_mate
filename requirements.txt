@@ -4,5 +4,6 @@ streamlit
 numpy
 prophet
 matplotlib
+plotly
 
 #Run this file with - pip3 install -r requirements.txt
