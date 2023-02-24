@@ -63,7 +63,7 @@ with st.container():
         st.write("[Learn More >](https://github.com/Shivansh1203/Team-Cl_AI_mate)")
 
     with right_column:
-        image = Image.open('images\hw2.jpg')
+        image = Image.open('images/hw2.jpg')
         st.image(image)
        
 
