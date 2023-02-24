@@ -92,6 +92,9 @@ def train_model(city):
   print(path)
   with open(path, 'w') as fout:
     fout.write(model_to_json(m))  # Save model
+  with open(path, 'r') as fin:
+    m1 = model_from_json(fin.read())  # Load model
+    print(m1)
 
 train_model('Adilabad')
 train_model('Khammam')
