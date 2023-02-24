@@ -1,6 +1,7 @@
 seaborn
 pandas
 streamlit
+sklearn
 numpy
 prophet
 matplotlib
