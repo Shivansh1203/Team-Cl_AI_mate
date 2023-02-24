@@ -63,7 +63,7 @@ with st.container():
         st.write("[Learn More >](https://github.com/Shivansh1203/Team-Cl_AI_mate)")
 
     with right_column:
-        image = Image.open('images\hw2.jpg')
+        image = Image.open('images/hw2.jpg')
         st.image(image)
        
 
@@ -104,9 +104,9 @@ st.title("Our Model")
 cities = ('Adilabad', 'Nizamabad', 'Karimnagar', 'Khammam', 'Warangal')
 selected_city = st.selectbox('Select a city for prediction', cities)
 
-@st.cache_data
+@st.cache(allow_output_mutation=True)
 def load_model(city):
-  path='content/{}_model.json'.format(city)
+  path='json/{}_model.json'.format(city)
   with open(path, 'r') as fin:
     m = model_from_json(fin.read())  # Load model
   return m
