@@ -88,13 +88,11 @@ def train_model(city):
   train, test = split(df_id_d , 'ds', 2021) #function call
 #   train , test = prophet_perp(df_id_d , 'heat_index') #function call
   m = prophet_train(train) #function call
-  path="content/{}_model.json".format(city)
-  print(path)
+  path="json/{}_model.json".format(city)
   with open(path, 'w') as fout:
     fout.write(model_to_json(m))  # Save model
-  with open(path, 'r') as fin:
-    m1 = model_from_json(fin.read())  # Load model
-    print(m1)
+  print(path)
+
 
 train_model('Adilabad')
 train_model('Khammam')
