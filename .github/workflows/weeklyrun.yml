@@ -22,4 +22,4 @@ jobs:
       - name: Execute Python Script
         # env:
         #   URI: ${{ secrets.URI }}
-        run: train.py
+        run: python train.py
