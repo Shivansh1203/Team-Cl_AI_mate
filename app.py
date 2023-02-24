@@ -112,7 +112,7 @@ def load_model(city):
   return m
 
 with st.spinner('Loading Model Into Memory....'):
-  m= load_model(selected_city)
+  m= load_model(donut_theta)
 
 
 
