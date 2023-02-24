@@ -74,6 +74,7 @@ def prophet_train(train ):
 def train_model(city):
   CSV="content/{}.csv".format(city)
   df = pd.read_csv(CSV)
+  print(df.head())
   df['datetime'] =  pd.to_datetime(df['datetime'], format='%Y%m%d %H:%M:%S')
   df = drop_schema(df) #function call
   T=(df['temp']*9/5)+32  
@@ -88,6 +89,7 @@ def train_model(city):
 #   train , test = prophet_perp(df_id_d , 'heat_index') #function call
   m = prophet_train(train) #function call
   path="content/{}_model.json".format(city)
+  print(path)
   with open(path, 'w') as fout:
     fout.write(model_to_json(m))  # Save model
 
