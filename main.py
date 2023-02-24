@@ -24,7 +24,7 @@ selected_city = st.selectbox('Select dataset for prediction', cities)
 
 @st.cache(allow_output_mutation=True)
 def load_model(city):
-  path='content/{}_model.json'.format(city)
+  path='json/{}_model.json'.format(city)
   with open(path, 'r') as fin:
     m = model_from_json(fin.read())  # Load model
   return m
