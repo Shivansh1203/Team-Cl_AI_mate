@@ -49,19 +49,19 @@ def split(df , time_col ,split ,lower = None , upper = None):
   
   return train ,test
 
-from sklearn.model_selection import train_test_split
-def prophet_perp(df , pred_col):
-  # - 
-  df['ds'] = df.index
-  # - 
-  df = df.rename({pred_col : 'y'}, axis = 'columns')
-  # - 
-  train, test = train_test_split(df, test_size=0.2 , shuffle= False)
+# from sklearn.model_selection import train_test_split
+# def prophet_perp(df , pred_col):
+#   # - 
+#   df['ds'] = df.index
+#   # - 
+#   df = df.rename({pred_col : 'y'}, axis = 'columns')
+#   # - 
+#   train, test = train_test_split(df, test_size=0.2 , shuffle= False)
 
-  # print(train.shape , test.shape)
-  # print(train.iloc[-1][time_col] , test.iloc[0][time_col])
+#   # print(train.shape , test.shape)
+#   # print(train.iloc[-1][time_col] , test.iloc[0][time_col])
   
-  return train , test
+#   return train , test
   
 def prophet_train(train ):
   m = Prophet(
@@ -85,7 +85,7 @@ def train_model(city):
   df_id_d = resample_schema(df , 'D' , 1) #function call
   df_id_d = df_id_d.loc[:'2022']
   train, test = split(df_id_d , 'ds', 2021) #function call
-  train , test = prophet_perp(df_id_d , 'heat_index') #function call
+#   train , test = prophet_perp(df_id_d , 'heat_index') #function call
   m = prophet_train(train) #function call
   path="content/{}_model.json".format(city)
   with open(path, 'w') as fout:

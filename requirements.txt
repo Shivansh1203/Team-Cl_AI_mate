@@ -1,7 +1,6 @@
 seaborn
 pandas
 streamlit
-sklearn.model_selection
 numpy
 prophet
 matplotlib
