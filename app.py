@@ -16,11 +16,11 @@ from streamlit_folium import folium_static
 import pandas as pd
 import geopandas as gpd
 import smtplib
-
+import datetime
 from shapely.geometry import Point
 
 
-# Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
+
 st.set_page_config(page_title="Team cl_AI_mate", page_icon=":tada:", layout="wide")
 
 
@@ -35,6 +35,15 @@ def load_lottieurl(url):
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+def heat_index(df):
+    df['datetime'] =  pd.to_datetime(df['datetime'], format='%Y%m%d %H:%M:%S')
+    T=(df['temp']*9/5)+32  
+    df['temp']=T
+    R=df['humidity']
+    hi = -42.379 + 2.04901523*T + 10.14333127*R - 0.22475541*T*R - 6.83783*(10**-3)*(T*T) - 5.481717*(10**-2)*R*R + 1.22874*(10**-3)*T*T*R + 8.5282*(10**-4)*T*R*R - 1.99*(10**-6)*T*T*R*R
+    df['heat_index'] = hi
+    return df
 
 
 local_css("style/style.css")
@@ -139,13 +148,84 @@ fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
 
 
+
+
 with st.container():
     st.write("---")
+    st.subheader("Choose a date")
+    d = st.date_input(
+    "",
+    datetime.date(2019, 7, 6))
     st.header("Map")
+    # Load the CSV file into a pandas DataFrame
+    df_ad = pd.read_csv('content/Adilabad.csv')
+    df_ka = pd.read_csv('content/Karimnagar.csv')
+    df_kh = pd.read_csv('content/Khammam.csv')
+    df_ni = pd.read_csv('content/Nizamabad.csv')
+    df_wa = pd.read_csv('content/Adilabad.csv')
+
+    # Convert the datetime column to a pandas datetime format
+    df_ad['datetime'] = pd.to_datetime(df_ad['datetime'])
+    df_ka['datetime'] = pd.to_datetime(df_ka['datetime'])
+    df_kh['datetime'] = pd.to_datetime(df_kh['datetime'])
+    df_ni['datetime'] = pd.to_datetime(df_ni['datetime'])
+    df_wa['datetime'] = pd.to_datetime(df_wa['datetime'])
+
+    df_ka.set_index('datetime', inplace=True)
+    df_ad.set_index('datetime', inplace=True)
+    df_kh.set_index('datetime', inplace=True)
+    df_ni.set_index('datetime', inplace=True)
+    df_wa.set_index('datetime', inplace=True)
+
+    df_ad = df_ad.resample('d').max()
+    df_ka = df_ka.resample('d').max()
+    df_kh = df_kh.resample('d').max()
+    df_ni = df_ni.resample('d').max()
+    df_wa = df_wa.resample('d').max()
+
+    df_ad = df_ad.reset_index()
+    df_ka = df_ka.reset_index()
+    df_kh = df_kh.reset_index()
+    df_ni = df_ni.reset_index()
+    df_wa = df_wa.reset_index()
+
+    df_ad['date'] = df_ad['datetime'].dt.date
+    df_ka['date'] = df_ka['datetime'].dt.date
+    df_kh['date'] = df_kh['datetime'].dt.date
+    df_ni['date'] = df_ni['datetime'].dt.date
+    df_wa['date'] = df_wa['datetime'].dt.date
+    # Set the datetime column as the DataFrame's index
+    df_ka.set_index('date', inplace=True)
+    df_ad.set_index('date', inplace=True)
+    df_kh.set_index('date', inplace=True)
+    df_ni.set_index('date', inplace=True)
+    df_wa.set_index('date', inplace=True)
+
+    temp_ad = df_ad.loc[d, 'temp']
+    temp_ka = df_ka.loc[d, 'temp']
+    temp_kh = df_kh.loc[d, 'temp']
+    temp_ni = df_ni.loc[d, 'temp']
+    temp_wa = df_wa.loc[d, 'temp']
+
+
+    df_ad=heat_index(df_ad)
+    df_ka=heat_index(df_ka)
+    df_kh=heat_index(df_kh)
+    df_ni=heat_index(df_ni)
+    df_wa=heat_index(df_wa)
+    # Select the temperature and heat index value for a particular date and store it in a variable
+
+    heat_index_ad = df_ad.loc[d, 'heat_index']
+    heat_index_ka = df_ka.loc[d, 'heat_index']
+    heat_index_kh = df_kh.loc[d, 'heat_index']
+    heat_index_ni = df_ni.loc[d, 'heat_index']
+    heat_index_wa = df_wa.loc[d, 'heat_index']
+
+
     cities = {
         'city': ['Adilabad', 'Nizamabad', 'Karimnagar', 'Khammam', 'Warangal'],
-        'country': ['India', 'India', 'India', 'India', 'India'],
-        'population': [883305, 8537673, 3979576, 2693976, 2345678],
+        'heat index': [heat_index_ad, heat_index_ka, heat_index_kh, heat_index_ni, heat_index_wa],
+        'Temperature(°C)': [temp_ad, temp_ka, temp_kh, temp_ni, temp_wa],
         'latitude': [19.6625054 , 18.6804717 , 18.4348833 , 17.2484683 , 17.9774221],
         'longitude': [78.4953182 , 78.0606503 , 79.0981286 , 80.006904 , 79.52881]
     }
@@ -170,8 +250,8 @@ with st.container():
         cities,
         name='City Data',
         tooltip=folium.GeoJsonTooltip(
-            fields=['city', 'country', 'population'],
-            aliases=['City', 'Country', 'Population'],
+            fields=['city', 'heat index', 'Temperature(°C)'],
+            aliases=['City', 'heat index', 'Temperature(°C)'],
             localize=True
         )
     ).add_to(m)
