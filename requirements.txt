@@ -9,7 +9,13 @@ pandas
 numpy
 prophet
 matplotlib
+sklearn
+scikit-learn
 plotly
+streamlit_folium
+folium
+geopandas
+# smtplib
 
 
 #Run this file with - pip3 install -r requirements.txt

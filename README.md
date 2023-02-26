@@ -1,5 +1,3 @@
-# Team-Cl_AI_mate
-T AIM: https://taim-gc.in/climate-change/?utm_source=iamneo&utm_medium=email&utm_campaign=student
-Cities: Adilabad, Nizamabad, Warangal, Karimnagar, and Khammam
+# cl_AI_mate
 
-
+https://harshhrs24-cl-ai-mate-app-smlq2q.streamlit.app/
