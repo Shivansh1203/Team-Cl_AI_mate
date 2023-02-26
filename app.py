@@ -114,7 +114,7 @@ st.title("Our Model")
 cities = ('Adilabad', 'Nizamabad', 'Karimnagar', 'Khammam', 'Warangal')
 selected_city = st.selectbox('Select a city for prediction', cities)
 
-@st.cache_data  #if running on vscode write only @st.cache_data
+@st.cache(allow_output_mutation=True)  #if running on vscode write only @st.cache_data
 def load_prediction(city):
   path="winner/winner_{}_prediction.csv".format(city)
   df = pd.read_csv(path)
