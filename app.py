@@ -20,6 +20,7 @@ import datetime
 from shapely.geometry import Point
 import base64
 from streamlit_timeline import st_timeline
+import plotly.graph_objects as go
 
 
 
@@ -184,9 +185,15 @@ with st.container():
     forecast = load_prediction(selected_model,selected_city)
 
 
-    st.header("Graph")
-    fig1 = plot_plotly(m, forecast)
-    st.plotly_chart(fig1)
+st.header("Graph")
+fig1 = plot_plotly(m, forecast)
+
+fig1.update_layout(
+    plot_bgcolor='#7FFFD4',  # set the background color
+    paper_bgcolor='#F8F8F8', # set the background color of the plot area
+)
+
+st.plotly_chart(fig1)
     
 # Heat wave timeline
 st.header(" Major Heat wave occurrences in the year 2023")
@@ -202,29 +209,6 @@ items = [
 timeline = st_timeline(items, groups=[], options={}, height="300px")
 st.subheader("Selected item")
 st.write(timeline)
-# events = [
-#     {
-#         "start": "2022-01-01",
-#         "title": "Event 1",
-#         "description": "This is event 1"
-#     },
-#     {
-#         "start": "2022-02-01",
-#         "title": "Event 2",
-#         "description": "This is event 2"
-#     },
-#     {
-#         "start": "2022-03-01",
-#         "title": "Event 3",
-#         "description": "This is event 3"
-#     }
-# ]
-
-
-
-
-# selected_event = st_timeline(events, height=500, start_zoom=1, end_zoom=5)
-# st.write(f"You selected the event '{selected_event['title']}'")
 
 # Define start and end dates
 start_date = datetime.date(2023, 1, 1)
