@@ -18,6 +18,7 @@ import geopandas as gpd
 import smtplib
 import datetime
 from shapely.geometry import Point
+# import base64
 
 
 
@@ -61,6 +62,21 @@ st.sidebar.markdown('''
 ---
 Created with ❤️ by [Team cl_AI_mate](https://github.com/Shivansh1203/Team-Cl_AI_mate).
 ''')
+                    
+# def embed_pdf(pdf_file):
+#     with open(pdf_file, "rb") as f:
+#         data = f.read()
+#     b64 = base64.b64encode(data).decode("utf-8")
+#     pdf_display = f'<embed src="data:application/pdf;base64,{b64}" width="300" height="600" type="application/pdf">'
+#     return pdf_display
+# pdf_display = embed_pdf("json/Solution Architecture(Team cl_AI_mate).pdf")
+# with open('Architecture.pdf', "rb") as f:
+#     data = f.read()
+# b64 = base64.b64encode(data).decode("utf-8")
+# pdf_display = f'<embed src="data:application/pdf;base64,{b64}" width="300" height="600" type="application/pdf">'
+# st.sidebar.markdown(pdf_display, unsafe_allow_html=True)
+
+
 # ---- HEADER SECTION ----
 with st.container():
     left_column, right_column = st.columns(2)
@@ -106,14 +122,9 @@ with st.container():
         st.write(
             """
             The problem statemeint asks you to build a solution to predict two environmental factors in the Tier-2 cities of the Indian state of Telangana: 
-
-
             1. Heat Wave Occurrences: Heat waves are prolonged periods of excessively high temperatures, which can have severe impacts on public health and local ecosystems. The task is to develop a solution that can predict when heat waves will occur in the Tier-2 cities of Telangana, to make people aware of the future occurrence of the Heat wave. 
-
  
-
             2. Air Quality Index (AQI): AQI is a measure of the air quality in a given location. It takes into account various pollutants in the air and provides a single numerical value that represents the overall air quality. The goal is to predict the AQI in the Tier-2 cities of Telangana to help residents and local authorities make informed decisions about air quality and health. 
-
   
             The solution should be able to accurately predict both heat wave occurrences and AQI for the time frame January 2023 - December 2023 on a monthly basis, which can help to mitigate their impacts on public health and the environment. 
             """
@@ -138,7 +149,7 @@ selected_city = st.selectbox('Select a city for prediction', cities)
 with st.container():
 
 
-    @st.cache(allow_output_mutation=True)  #if running on vscode write only @st.cache_data
+    @st.cache_data #if running on vscode write only @st.cache_data
     def load_prediction(city):
         path="winner/winner_{}_prediction.csv".format(city)
         df = pd.read_csv(path)
@@ -198,7 +209,7 @@ with st.container():
 
         cities = {
             'city': ['Adilabad', 'Nizamabad', 'Karimnagar', 'Khammam', 'Warangal'],
-            'heat index': [heat_index_ad, heat_index_ka, heat_index_kh, heat_index_ni, heat_index_wa],
+            'Heat Index': [heat_index_ad, heat_index_ka, heat_index_kh, heat_index_ni, heat_index_wa],
             'Temperature(°F)': [temp_ad, temp_ka, temp_kh, temp_ni, temp_wa],
             'latitude': [19.6625054 , 18.6804717 , 18.4348833 , 17.2484683 , 17.9774221],
             'longitude': [78.4953182 , 78.0606503 , 79.0981286 , 80.006904 , 79.52881]
@@ -224,8 +235,8 @@ with st.container():
             cities,
             name='City Data',
             tooltip=folium.GeoJsonTooltip(
-                fields=['city', 'heat index', 'Temperature(°F)'],
-                aliases=['City', 'heat index', 'Temperature(°F)'],
+                fields=['city', 'Heat Index', 'Temperature(°F)'],
+                aliases=['City', 'Heat Index', 'Temperature(°F)'],
                 localize=True
             )
         ).add_to(m)
@@ -254,25 +265,44 @@ with st.container():
 
 
 # Description
+def info(title, text):
+    with  st.expander(f"{title}"):
+        st.write(text)
+
+st.write("---")
+info("Description", "It will give the details of relevant parameters in reference to respective date and selected city.")
+
 with st.container():
-    st.write("---")
-    st.header("Description")
     path="content/{}.csv".format(selected_city)
 
     df = pd.read_csv(path)
     df = prepare(df)
 
-    left_column, middle_column, right_column = st.columns(3)
+    left_column, middle_column1, middle_column, right_column, middle_column2 = st.columns(5)
     with left_column:
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Temperature : {}</p>".format(df.loc[d, 'temp']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Humidity : {}</p>".format(df.loc[d, 'humidity']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Preciptation : {}</p>".format(df.loc[d, 'precip']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Wind speed : {}</p>".format(df.loc[d, 'windspeed']), unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Temperature(°F) : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Humidity : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Preciptation : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Wind speed : </p>", unsafe_allow_html=True)
+    with middle_column1:
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'temp']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'humidity']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'precip']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'windspeed']), unsafe_allow_html=True) 
+    with middle_column:   
+        st.write("                 ")   
     with right_column:
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Cloud cover : {}</p>".format(df.loc[d, 'cloudcover']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Solar Radiation : {}</p>".format(df.loc[d, 'solarradiation']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>UV Index : {}</p>".format(df.loc[d, 'uvindex']), unsafe_allow_html=True)
-        st.write("<p style='color: #FF1493; font-size: 20px;'>Condition : {}</p>".format(df.loc[d, 'conditions']), unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Cloud cover : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Solar Radiation : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>UV Index : </p>", unsafe_allow_html=True)
+        st.write("<p style='color: #00C957; font-size: 20px;'>Condition : </p>", unsafe_allow_html=True)
+    with middle_column2:
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'cloudcover']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'solarradiation']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'uvindex']), unsafe_allow_html=True)
+        st.write("<p style='color: #333333; font-size: 20px;'>{}</p>".format(df.loc[d, 'conditions']), unsafe_allow_html=True)
+
+    
 
 
 
@@ -305,17 +335,14 @@ with st.container():
     """
     <style>
        
-
          /* Adjust the width of the form elements */
         .stTextInput {
             width: 50%;
-
         }
         
         .stTextArea {
             width: 20%;
         }
-
         /* Style the submit button */
         .stButton button {
             background-color: #45a049;
@@ -325,7 +352,6 @@ with st.container():
             border-radius: 5px;
             width: 10%;
         }
-
         /* Style the success message */
         .stSuccess {
             color: #0072C6;
@@ -336,8 +362,3 @@ with st.container():
     """,
     unsafe_allow_html=True
 )
-
-
-
-
-
