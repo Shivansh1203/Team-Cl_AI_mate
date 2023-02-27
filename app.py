@@ -23,7 +23,6 @@ from streamlit_timeline import st_timeline
 import plotly.graph_objects as go
 
 
-
 st.set_page_config(page_title="Team cl_AI_mate", page_icon=":tada:", layout="wide")
 
 
@@ -45,13 +44,21 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
+lottie_coding_1 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
+lottie_coding_2 = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_dXP5CGL9ik.json")
+
 
 
 st.sidebar.header('Team cl_AI_mate')
 
 st.sidebar.subheader('What you want to Predict?')
 selected_model = st.sidebar.selectbox('Choose:', ('Heat wave', 'AQI')) 
+
+
+
+
 
 # st.sidebar.subheader('Choose a city:')
 # donut_theta = st.sidebar.selectbox('Select data', ('Adilabad', 'Nizamabad', 'Karimnagar', 'Khammam', 'Warangal'))
@@ -63,7 +70,6 @@ selected_model = st.sidebar.selectbox('Choose:', ('Heat wave', 'AQI'))
 st.sidebar.markdown('''
 ---
 Created with ❤️ by [Team cl_AI_mate](https://github.com/HarshHrs24/Team-cl_AI_mate).
-
 ''')
                     
 # def embed_pdf(pdf_file):
@@ -94,7 +100,8 @@ with st.container():
         st.write("[Learn More >](https://github.com/HarshHrs24/Team-cl_AI_mate)")
 
     with right_column:
-        image = Image.open('images/hw2.jpg')
+        i='images/{}_hw2.jpg'.format(selected_model)
+        image = Image.open(i)
         st.image(image)
        
 
@@ -135,21 +142,19 @@ with st.container():
         st.write(
             """
             The problem statement asks you to build a solution to predict two environmental factors in the Tier-2 cities of the Indian state of Telangana: 
-
-
             1. Heat Wave Occurrences: Heat waves are prolonged periods of excessively high temperatures, which can have severe impacts on public health and local ecosystems. The task is to develop a solution that can predict when heat waves will occur in the Tier-2 cities of Telangana, to make people aware of the future occurrence of the Heat wave. 
-
  
-
             2. Air Quality Index (AQI): AQI is a measure of the air quality in a given location. It takes into account various pollutants in the air and provides a single numerical value that represents the overall air quality. The goal is to predict the AQI in the Tier-2 cities of Telangana to help residents and local authorities make informed decisions about air quality and health. 
-
   
             The solution should be able to accurately predict both heat wave occurrences and AQI for the time frame January 2023 - December 2023 on a monthly basis, which can help to mitigate their impacts on public health and the environment. 
             """
         )
 
     with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
+        if selected_model=='Heat wave':
+              st_lottie(lottie_coding_1, height=300, key="coding")
+        else:
+              st_lottie(lottie_coding_2, height=300, key="coding")
 
 
 st.write("---")
@@ -209,6 +214,7 @@ items = [
 timeline = st_timeline(items, groups=[], options={}, height="300px")
 st.subheader("Selected item")
 st.write(timeline)
+
 
 # Define start and end dates
 start_date = datetime.date(2023, 1, 1)
@@ -495,17 +501,14 @@ with st.container():
     """
     <style>
        
-
          /* Adjust the width of the form elements */
         .stTextInput {
             width: 50%;
-
         }
         
         .stTextArea {
             width: 20%;
         }
-
         /* Style the submit button */
         .stButton button {
             background-color: #45a049;
@@ -515,7 +518,6 @@ with st.container():
             border-radius: 5px;
             width: 10%;
         }
-
         /* Style the success message */
         .stSuccess {
             color: #0072C6;
@@ -526,8 +528,3 @@ with st.container():
     """,
     unsafe_allow_html=True
 )
-
-
-
-
-
