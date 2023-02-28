@@ -21,6 +21,7 @@ from shapely.geometry import Point
 import base64
 from streamlit_timeline import st_timeline
 import plotly.graph_objects as go
+import os
 
 
 st.set_page_config(page_title="Team cl_AI_mate", page_icon=":tada:", layout="wide")
@@ -674,6 +675,12 @@ def displayPDF(file):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-file_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
+# file_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
+# displayPDF(file_path)
+
+# Get the absolute path of the file
+file_path = os.path.abspath("json/Solution Architecture(Team cl_AI_mate).pdf")
+
+# Call the displayPDF() function with the absolute file path
 displayPDF(file_path)
 
