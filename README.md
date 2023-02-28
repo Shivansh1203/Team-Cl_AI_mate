@@ -1,3 +1,3 @@
 # Team cl_AI_mate
 
-Deployed on - https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/
+Deployed on - https://shivansh1203-team-cl-ai-mate-app-3dm4ag.streamlit.app/
