@@ -645,7 +645,7 @@ with st.container():
 import streamlit as st
 
 # Define the PDF file path
-pdf_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
+pdf_path = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view?usp=share_link"
 
 # Define the HTML code to embed the PDF file
 html_code = f'<iframe src="https://docs.google.com/viewer?url={pdf_path}&embedded=true" width="800px" height="1000px" frameborder="0"></iframe>'
