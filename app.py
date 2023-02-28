@@ -80,11 +80,11 @@ Created with ❤️ by [Team cl_AI_mate](https://github.com/HarshHrs24/Team-cl_A
 #     return pdf_display
 # pdf_display = embed_pdf("json/Solution Architecture(Team cl_AI_mate).pdf")
 
-with open('Architecture.pdf', "rb") as f:
-    data = f.read()
-b64 = base64.b64encode(data).decode("utf-8")
-pdf_display = f'<embed src="data:application/pdf;base64,{b64}" width="300" height="600" type="application/pdf">'
-st.sidebar.markdown(pdf_display, unsafe_allow_html=True)
+# with open('Architecture.pdf', "rb") as f:
+#     data = f.read()
+# b64 = base64.b64encode(data).decode("utf-8")
+# pdf_display = f'<embed src="data:application/pdf;base64,{b64}" width="300" height="600" type="application/pdf">'
+# st.sidebar.markdown(pdf_display, unsafe_allow_html=True)
 
 
 # ---- HEADER SECTION ----
@@ -639,3 +639,28 @@ with st.container():
     """,
     unsafe_allow_html=True
 )
+
+
+#Embedded file 
+import streamlit as st
+
+# Define the PDF file path
+pdf_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
+
+# Define the HTML code to embed the PDF file
+html_code = f'<iframe src="https://docs.google.com/viewer?url={pdf_path}&embedded=true" width="800px" height="1000px" frameborder="0"></iframe>'
+
+# Display the PDF file in the Streamlit app
+st.markdown(html_code, unsafe_allow_html=True)
+
+# path_eda="json\Solution Architecture(Team cl_AI_mate).pdf"
+# file_ = open(path_eda, "rb")
+# contents = file_.read()
+# data_url = base64.b64encode(contents).decode("utf-8")
+# file_.close()
+
+# st.markdown(
+# f'<src="data:json\Solution Architecture(Team cl_AI_mate).pdf;base64,{data_url}" width="100%" alt="EDA">',
+# unsafe_allow_html=True,
+# )
+
