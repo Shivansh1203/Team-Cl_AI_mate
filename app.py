@@ -123,6 +123,7 @@ def heatwave_prepare(df):
    hi = -42.379 + 2.04901523*T + 10.14333127*R - 0.22475541*T*R - 6.83783*(10**-3)*(T*T) - 5.481717*(10**-2)*R*R + 1.22874*(10**-3)*T*T*R + 8.5282*(10**-4)*T*R*R - 1.99*(10**-6)*T*T*R*R
    df['heat_index'] = hi
    return df
+
 def aqi_prepare(df):
    df['dt'] = pd.to_datetime(df['dt'])
    df.set_index('dt', inplace=True)
@@ -131,6 +132,47 @@ def aqi_prepare(df):
    df['date'] = df['dt'].dt.date
    df.set_index('date', inplace=True)
    return df
+
+def line_plot_plotly(m, forecast):
+    past = m.history['y']
+    future = forecast['yhat']
+    timeline = forecast['ds']
+
+    trace1 = go.Scatter(
+        x=timeline,
+        y=past,
+        mode='lines',
+        name='Actual',
+        line=dict(color='#777777')
+    )
+    trace2 = go.Scatter(
+        x=timeline,
+        y=future,
+        mode='lines',
+        name='Predicted',
+        line=dict(color='#FF7F50')
+    )
+
+    data = [trace1, trace2]
+
+    layout = go.Layout(
+        title='Actual vs. Predicted Values',
+        xaxis=dict(title='Date', rangeslider=dict(visible=True),
+                   rangeselector=dict(
+                buttons=list([
+              dict(count=1, label="1y", step="year", stepmode="backward"),
+              dict(count=2, label="2y", step="year", stepmode="backward"),
+              dict(count=3, label="3y", step="year", stepmode="backward"),
+              dict(step="all")
+                ])
+            )),
+        yaxis=dict(title='Value'),
+        showlegend=True
+    )
+
+    fig = go.Figure(data=data, layout=layout)
+
+    return fig
 
 # ---- WHAT I DO ----
 with st.container():
@@ -191,17 +233,32 @@ with st.container():
 
 
 st.header("Graph")
-fig1 = plot_plotly(m, forecast)
 
-fig1.update_layout(
-    plot_bgcolor='#7FFFD4',  # set the background color
-    paper_bgcolor='#F8F8F8', # set the background color of the plot area
-)
+agree = st.checkbox('Line graph')
+
+if agree:
+    fig1 = line_plot_plotly(m, forecast)
+
+    fig1.update_layout(
+        plot_bgcolor='#7FFFD4',  # set the background color
+        paper_bgcolor='#F8F8F8', # set the background color of the plot area
+    )
+    
+
+else:
+    fig1 = plot_plotly(m, forecast)
+
+    fig1.update_layout(
+        plot_bgcolor='#7FFFD4',  # set the background color
+        paper_bgcolor='#F8F8F8', # set the background color of the plot area
+    )
+
 
 st.plotly_chart(fig1)
     
 # Heat wave timeline
-st.header(" Major Heat wave occurrences in the year 2023")
+timeine_title=" Major {} occurrences in the year 2023".format(selected_model)
+st.header(timeine_title)
 items = [
     {"id": 1, "content": "2023-01-20", "start": "2023-03-01"},
     {"id": 2, "content": "2023-10-09", "start": "2023-04-09"},
@@ -211,44 +268,86 @@ items = [
     {"id": 6, "content": "2023-10-27", "start": "2023-08-27"},
 ]
 
-timeline = st_timeline(items, groups=[], options={}, height="300px")
+options = {
+    "min": "2023-01-01",
+    "max": "2023-12-31"
+}
+
+timeline = st_timeline(items, groups=[], options=options, height="300px")
 st.subheader("Selected item")
 st.write(timeline)
 
+with st.container():
+    st.write("")
+    c1, c2, c3,c4= st.columns(4)
+    with c1:
+        # Define start and end dates
+        start_date = datetime.date(2023, 1, 1)
+        end_date = datetime.date(2023, 12, 31)
 
-# Define start and end dates
-start_date = datetime.date(2023, 1, 1)
-end_date = datetime.date(2023, 12, 31)
+        
+        # Create date input
+        selected_date = st.date_input(
+            "Choose a date for the year 2023",
+            value=datetime.date(2023, 1, 1),
+            min_value=start_date,
+            max_value=end_date,
+            key="date_input"
+        )
 
-
-# Create date input
-selected_date = st.date_input(
-    "Choose a date for the year 2023",
-    value=datetime.date(2023, 1, 1),
-    min_value=start_date,
-    max_value=end_date,
-    key="date_input"
-)
-
-# Display selected date
+# Display value for selected date
 st.write("You selected:", selected_date.strftime("%B %d, %Y"))
+
+st.write("---")
+with st.container():
+    c1, c2 = st.columns(2)
+    with c1:
+
+            """### Temperature trend over the decade"""
+            gif1="images/{}_temp.gif".format(selected_city)
+            file_ = open(gif1, "rb")
+            contents = file_.read()
+            data_url = base64.b64encode(contents).decode("utf-8")
+            file_.close()
+
+            st.markdown(
+                f'<img src="data:image/gif;base64,{data_url}" width="100%" alt="temp gif">',
+                unsafe_allow_html=True,
+            )
+
+    with c2:
+            """### Humidity trend over the decade"""
+            gif2="images/{}_hum.gif".format(selected_city)
+            file_1 = open(gif2, "rb")
+            contents1 = file_1.read()
+            data_url1 = base64.b64encode(contents1).decode("utf-8")
+            file_1.close()
+            st.markdown(
+                f'<img src="data:image/gif;base64,{data_url1}" width="100%" alt="hum gif">',
+                unsafe_allow_html=True,
+            )
+
+
+
+
+
 
 
 st.write("---")
-st.subheader("Choose a date")
-
+st.header("Map")
+st.write("")
 if selected_model=='Heat wave':
     min_date = datetime.date(2012, 1, 1)
     max_date = datetime.date(2022, 12, 1)
 else:
     min_date = datetime.date(2020, 12, 2)
     max_date = datetime.date(2022, 12, 1)
+
 d = st.date_input(
-"",
+"Choose a date",
 datetime.date(2021, 7, 6),
 min_value=min_date,
 max_value=max_date)
-st.header("Map")
 with st.container():
 
     left_column, middle_column, right_column = st.columns(3)
@@ -390,10 +489,14 @@ with st.container():
 
 
     with right_column:
-        image = Image.open('images/hic1.jpeg')
-        image2 = Image.open('images/hic2.jpeg')
-        st.image(image)
-        st.image(image2)
+        if selected_model=='Heat wave':
+            image = Image.open('images/hic1.jpeg')
+            image2 = Image.open('images/hic2.jpeg')
+            st.image(image)
+            st.image(image2)
+        else:
+            image = Image.open('images/AQI_ref.jpeg')
+            st.image(image)
 
 
 
@@ -468,7 +571,15 @@ with st.container():
             st.write("<p style='color: #333333; font-size: 20px;'> : {}  μg/m3</p>".format(df.loc[d, 'pm2_5']), unsafe_allow_html=True)
             st.write("<p style='color: #333333; font-size: 20px;'> : {}  μg/m3</p>".format(df.loc[d, 'pm10']), unsafe_allow_html=True)
             st.write("<p style='color: #333333; font-size: 20px;'> : {}  μg/m3</p>".format(df.loc[d, 'nh3']), unsafe_allow_html=True)
-    
+            
+            
+        
+# Polar plot
+
+st.write(
+    """
+    """
+)
 
 
 
