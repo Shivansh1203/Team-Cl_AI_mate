@@ -676,6 +676,6 @@ def displayPDF(url):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-pdf_url = "https://pdf.ac/1ydF4l"
+pdf_url = "https://pdf.ac/1lu6xI"
 displayPDF(pdf_url)
 
