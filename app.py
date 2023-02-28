@@ -676,6 +676,6 @@ def displayPDF(url):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-pdf_url = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view"
+pdf_url = "https://drive.google.com/file/d/18UOPySM7ZOXA0Cmz4jkNeO_ZNhea_fF_/view?usp=share_link"
 displayPDF(pdf_url)
 
