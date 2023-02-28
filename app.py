@@ -642,16 +642,15 @@ with st.container():
 
 
 #Embedded file 
-import streamlit as st
 
-# Define the PDF file path
-pdf_path = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view?usp=share_link"
+# # Define the PDF file path
+# pdf_path = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view?usp=share_link"
 
-# Define the HTML code to embed the PDF file
-html_code = f'<iframe src="https://docs.google.com/viewer?url={pdf_path}&embedded=true" width="800px" height="1000px" frameborder="0"></iframe>'
+# # Define the HTML code to embed the PDF file
+# html_code = f'<iframe src="https://docs.google.com/viewer?url={pdf_path}&embedded=true" width="800px" height="1000px" frameborder="0"></iframe>'
 
-# Display the PDF file in the Streamlit app
-st.markdown(html_code, unsafe_allow_html=True)
+# # Display the PDF file in the Streamlit app
+# st.markdown(html_code, unsafe_allow_html=True)
 
 # path_eda="json\Solution Architecture(Team cl_AI_mate).pdf"
 # file_ = open(path_eda, "rb")
@@ -663,4 +662,18 @@ st.markdown(html_code, unsafe_allow_html=True)
 # f'<src="data:json\Solution Architecture(Team cl_AI_mate).pdf;base64,{data_url}" width="100%" alt="EDA">',
 # unsafe_allow_html=True,
 # )
+
+def displayPDF(file):
+    # Opening file from file path
+    with open(file, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+    # Embedding PDF in HTML
+    pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+
+    # Displaying File
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
+file_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
+displayPDF(file_path)
 
