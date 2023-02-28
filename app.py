@@ -21,7 +21,7 @@ from shapely.geometry import Point
 import base64
 from streamlit_timeline import st_timeline
 import plotly.graph_objects as go
-import os
+# import os
 
 
 st.set_page_config(page_title="Team cl_AI_mate", page_icon=":tada:", layout="wide")
@@ -664,10 +664,11 @@ with st.container():
 # unsafe_allow_html=True,
 # )
 
-def displayPDF(file):
-    # Opening file from file path
-    with open(file, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+def displayPDF(url):
+    # Downloading file from URL
+    response = requests.get(url)
+    base64_pdf = base64.b64encode(response.content).decode('utf-8')
 
     # Embedding PDF in HTML
     pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
@@ -675,10 +676,6 @@ def displayPDF(file):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-# file_path = "json\Solution Architecture(Team cl_AI_mate).pdf"
-# displayPDF(file_path)
-
-# Get the absolute path of the file
 pdf_url = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view?usp=share_link"
 displayPDF(pdf_url)
 
