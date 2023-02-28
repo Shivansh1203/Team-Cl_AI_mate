@@ -676,6 +676,6 @@ def displayPDF(url):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-pdf_url = "https://github.com/prakharraj1302/dummy_pdf_link/blob/ec0af4e1fd0c1e1007875f2a8d8dc4e1f58e50f1/134_3_2525308_1667726920_AWS%20Course%20Completion%20Certificate%20(1).pdf"
+pdf_url = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view"
 displayPDF(pdf_url)
 
