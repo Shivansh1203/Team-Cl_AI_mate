@@ -679,8 +679,6 @@ def displayPDF(file):
 # displayPDF(file_path)
 
 # Get the absolute path of the file
-file_path = os.path.abspath("json/Solution Architecture(Team cl_AI_mate).pdf")
-
-# Call the displayPDF() function with the absolute file path
-displayPDF(file_path)
+pdf_url = "https://drive.google.com/file/d/1-_vLO6ieU0mpwhZukKpTd19qIGM-6hpS/view?usp=share_link"
+displayPDF(pdf_url)
 
