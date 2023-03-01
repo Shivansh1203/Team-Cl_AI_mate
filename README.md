@@ -1,27 +1,9 @@
-# Team cl_AI_mate
+# Team cl_AI_mate - Heat wave and AQI Prediction
 
 <!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Team-cl_AI_mate/pull/73 -->
 <a name="readme-top"></a>
 <!--
 ***  T-AIM Academic Grand Challenge on Climate Change. 
-*** In sympathy users can create rooms to socialize themselves in an open environment to discuss about their problems without revealing your identity.
-*** It helps shy and introverts who are not confident enough to speak in public openly.
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -35,7 +17,7 @@
   <h3 align="center">Team cl_AI_mate</h3>
 
   <p align="center">
-    T-AIM Academic Grand Challenge on Climate Change. 
+  <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
     <br />
     <br />
     <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Explore the docs »</strong></a>
@@ -233,34 +215,4 @@ Project Link: [https://github.com/HarshHrs24/Team-cl_AI_mate](https://github.com
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/HarshHrs24/Sympathy_Garuda3.0.svg?style=for-the-badge
-[contributors-url]: https://github.com/HarshHrs24/Sympathy_Garuda3.0/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/HarshHrs24/Sympathy_Garuda3.0.svg?style=for-the-badge
-[forks-url]: https://github.com/HarshHrs24/Sympathy_Garuda3.0/network/members
-[stars-shield]: https://img.shields.io/github/stars/HarshHrs24/Sympathy_Garuda3.0.svg?style=for-the-badge
-[stars-url]: https://github.com/HarshHrs24/Sympathy_Garuda3.0/stargazers
-[issues-shield]: https://img.shields.io/github/issues/HarshHrs24/Sympathy_Garuda3.0.svg?style=for-the-badge
-[issues-url]: https://github.com/HarshHrs24/Sympathy_Garuda3.0/issues
-[license-shield]: https://img.shields.io/github/license/HarshHrs24/Sympathy_Garuda3.0.svg?style=for-the-badge
-[license-url]: https://github.com/HarshHrs24/Sympathy_Garuda3.0/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/shivansh-rastogi-04bb27225
-[product-screenshot]: images_readme/screenshot.png
-[MongoDB.js]: https://img.shields.io/badge/mongoDB-FF2D20?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Mongo-url]: https://www.mongodb.com/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Express.js]: https://img.shields.io/badge/express.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Express-url]: https://expressjs.com/
-[Node.js]: https://img.shields.io/badge/node.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Node-url]: https://nodejs.org/
-[Javascript.dev]: https://img.shields.io/badge/Javascript-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Javascript-url]: https://www.javascript.com/
-<!-- [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com -->
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+
