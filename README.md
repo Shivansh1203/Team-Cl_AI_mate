@@ -27,10 +27,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HarshHrs24/Team-cl_AI_mate">
-    <img src="images_readme/cl_AI_mate logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"></a>
 
+  <img src="images_readme/cl_AI_mate logo.png" alt="Logo" width="80" height="80">
+<!--     ![Example Image](https://github.com/Shivansh1203/Team-Cl_AI_mate/blob/main/images_readme/cl_AI_mate%20logo.png) -->
+    
   <h3 align="center">Team cl_AI_mate</h3>
 
   <p align="center">
