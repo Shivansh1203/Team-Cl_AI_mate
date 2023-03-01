@@ -3,7 +3,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Sympathy_Garuda3.0/pull/73 -->
 <a name="readme-top"></a>
 <!--
-***  Garuda 3.0 Hackathon. It is a self group session platform.
+***  T-AIM Academic Grand Challenge on Climate Change. 
 *** In sympathy users can create rooms to socialize themselves in an open environment to discuss about their problems without revealing your identity.
 *** It helps shy and introverts who are not confident enough to speak in public openly.
 
@@ -27,23 +27,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HarshHrs24/Sympathy_Garuda3.0">
+  <a href="https://github.com/HarshHrs24/Team-cl_AI_mate">
     <img src="images_readme/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Sympathy</h3>
+  <h3 align="center">Team cl_AI_mate</h3>
 
   <p align="center">
-   Garuda Hackathon 3.0
-    <br />
-    <a href="https://github.com/HarshHrs24/Sympathy_Garuda3.0"><strong>Explore the docs »</strong></a>
+    T-AIM Academic Grand Challenge on Climate Change. 
     <br />
     <br />
-    <a href="https://youtu.be/JvNsH80WaCE">View Demo</a>
-    ·
-    <a href="https://github.com/HarshHrs24/Sympathy_Garuda3.0/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/HarshHrs24/Sympathy_Garuda3.0/issues">Request Feature</a>
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Explore the docs »</strong></a>
+    <br />
   </p>
 </div>
 
