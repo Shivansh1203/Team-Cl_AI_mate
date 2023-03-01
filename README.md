@@ -98,9 +98,15 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 2. Give read and write permission to workflows in your repository from Settings-->General-->Actions.
 
+<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
+
 ### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements.
 
+<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
+
 ### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
 
 ### 5. Deploy the app in Streamlit.
 
@@ -122,31 +128,6 @@ pip install -r requirements.txt
 This is an example about our approach.
 
 
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/HarshHrs24/Sympathy_Garuda3.0.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-<!-- ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
- -->
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -164,7 +145,7 @@ See the [open issues](https://github.com/HarshHrs24/Sympathy_Garuda3.0) for a fu
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<!-- ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -187,15 +168,16 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- -->
+ --> 
 
 
 <!-- CONTACT -->
-## Contact
+## Our Team
 
-Your Name - [Harsh Soni](shivansh.rastogi2002@gmail.com) - shivansh.rastogi2002@gmail.com
-
-Project Link: [https://github.com/HarshHrs24/Team-cl_AI_mate](https://github.com/your_username/repo_name)
+* [Harsh Soni](https://github.com/HarshHrs24)
+* [Shivansh Rastogi](https://github.com/Shivansh1203)
+* [Gaurav Garwa](https://github.com/gaurav1832)
+* [Prakhar Raj Pandey](https://github.com/prakharraj1302)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
