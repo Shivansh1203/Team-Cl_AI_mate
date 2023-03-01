@@ -106,7 +106,7 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
 
-<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
+<img src="https://drive.google.com/uc?export=view&id=1qyEO2FDDxNJEpA_hz6QWcR3aJMxXnPKG" alt="Logo" width="600" height="100">
 
 ### 5. Deploy the app in Streamlit.
 
