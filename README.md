@@ -36,22 +36,16 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
+<!--       <ul>
         <li><a href="#built-with">Built With</a></li>
-      </ul>
+      </ul> -->
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#how-to-run-the-project-in-5-simple-steps">How to run the project in 5 simple steps</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#our-approach">Our Approach</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-<!--     <li><a href="#license">License</a></li> -->
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#our-team">Our Team</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -92,7 +86,7 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 
 <!-- GETTING STARTED -->
-## How to run the project in 5 simple steps:
+## How to run the project in 5 simple steps
 
 ### 1. Clone the repository or download the zip file in your machine.
 
