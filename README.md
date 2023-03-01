@@ -28,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HarshHrs24/Team-cl_AI_mate">
-    <img src="images_readme/logo.png" alt="Logo" width="80" height="80">
+    <img src="images_readme/cl_AI_mate logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Team cl_AI_mate</h3>
