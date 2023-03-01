@@ -119,7 +119,10 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 5. Deploy the app in Streamlit
 
-Note- If you want to run on local environment first install the necessary libraries and then write the python "-m streamlit run app.py" command in your terminal. The site will be hosted on a local host.
+Note- If you want to run on local environment first install the necessary libraries and then write the python following command in your terminal. The site will be hosted on a local host.
+```sh
+-m streamlit run app.py
+```
 
 
 To get a local copy up and running follow these simple example steps.
