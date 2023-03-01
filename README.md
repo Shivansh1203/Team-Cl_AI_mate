@@ -1,6 +1,6 @@
 # Team cl_AI_mate
 
-<!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Sympathy_Garuda3.0/pull/73 -->
+<!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Team-cl_AI_mate/pull/73 -->
 <a name="readme-top"></a>
 <!--
 ***  T-AIM Academic Grand Challenge on Climate Change. 
@@ -191,9 +191,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [Shivansh Rastogi](shivansh.rastogi2002@gmail.com) - shivansh.rastogi2002@gmail.com
+Your Name - [Harsh Soni](shivansh.rastogi2002@gmail.com) - shivansh.rastogi2002@gmail.com
 
-Project Link: [https://github.com/HarshHrs24/Sympathy_Garuda3.0](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/HarshHrs24/Team-cl_AI_mate](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
