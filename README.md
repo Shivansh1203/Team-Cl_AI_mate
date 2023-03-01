@@ -112,7 +112,7 @@ To install all the libraries in the requirement.txt use the following command.
 ```sh
 pip install -r requirements.txt 
 ```
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Screenshots -->
 
 
