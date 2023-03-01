@@ -126,11 +126,11 @@ This is an example about our approach.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Creation of HomePage
-- [x] Authentication and OTP Generation using Twilio
-- [ ] Using WebRTC for communications system
-- [ ] Making subpages for rooms
-- [ ] Making Article Section
+* Step 1
+* Step 2
+* Step 2
+* Step 2
+* Step 2
     
 See the [open issues](https://github.com/HarshHrs24/Sympathy_Garuda3.0) for a full list of proposed features (and known issues).
 
