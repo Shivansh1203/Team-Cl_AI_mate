@@ -23,7 +23,7 @@
   <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
   <h5><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Link »</strong></a></h5>
     <br />
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory data analysis (EDA) »</strong></a>
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) »</strong></a>
     <br />
   </p>
 </div>
@@ -181,14 +181,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [T-AIM NASSCOM](https://taim-gc.in/climate-change)
+* [GitHub Repository](https://github.com/iamneo-production/00aa9422-7c04-4b7c-975b-6ed887ff7d95)
+<!-- * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [React Icons](https://react-icons.github.io/react-icons/search) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
