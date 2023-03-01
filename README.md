@@ -1,5 +1,8 @@
 # Team cl_AI_mate - Heat wave and AQI Prediction
 
+<img src="https://drive.google.com/uc?export=view&id=1nFaRAWibLL1V4n13ATWZDanxMUr0b0Ba" alt=" " width="1010" height="100">
+
+
 <!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Team-cl_AI_mate/pull/73 -->
 <a name="readme-top"></a>
 <!--
