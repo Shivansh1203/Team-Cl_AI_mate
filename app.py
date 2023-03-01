@@ -667,7 +667,7 @@ with st.container():
 
 # Display the PDF file in the Streamlit app
 st.markdown('''
-<iframe src="https://drive.google.com/uc?export=view&id=14Rtd_9YLkcFVXsGZs5p2Dn-G5aNwEfmK"
+<iframe src="https://www.craft.do/s/mX4qtlVHBtGieR"
 frameborder="0"
 marginheight="0"
 marginwidth="0"
