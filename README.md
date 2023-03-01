@@ -96,13 +96,13 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 1. Clone the repository or download the zip file in your machine.
 
-### 2. Give read and write permission to workflows in your repository from Settings-->General-->Actions.
+### 2. Give read and write permission to workflows in your repository from Settings-->Actions-->General.
 
-<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
+<img src="https://drive.google.com/uc?export=view&id=1DiVD8e6t15xltalqrYWa3072FRGwEB9O" alt="Logo" width="600" height="300">
 
 ### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements.
 
-<!-- <img src="https://drive.google.com/uc?export=view&id=17sCV3lHbWYeQ9JMyX9pQctvvQz3pUrgH" alt="Logo" width="150" height="100"> -->
+<img src="https://drive.google.com/uc?export=view&id=18dcWvUPxwmtVG9hXbw-uTbvgyO_pYPnY" alt="Logo" width="1000" height="300">
 
 ### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
 
