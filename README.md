@@ -27,10 +27,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/HarshHrs24/Team-cl_AI_mate">
-    <img src="images_readme/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"></a>
 
+  <img src="images_readme/cl_AI_mate logo.png" alt="Logo" width="80" height="80">
+<!--     ![Example Image](https://github.com/Shivansh1203/Team-Cl_AI_mate/blob/main/images_readme/cl_AI_mate%20logo.png) -->
+    
   <h3 align="center">Team cl_AI_mate</h3>
 
   <p align="center">
@@ -75,24 +76,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-We often see that a group is better than one when dealing with mental health problem
+The problem statement asks you to build a solution to predict two environmental factors in the Tier-2 cities of the Indian state of Telangana:
 
-Mental health is not just the absence of a mental disorder. It’s found in people of all countries, and  societies.
+Heat Wave Occurrences: Heat waves are prolonged periods of excessively high temperatures, which can have severe impacts on public health and local ecosystems. The task is to develop a solution that can predict when heat waves will occur in the Tier-2 cities of Telangana, to make people aware of the future occurrence of the Heat wave.
 
-A survey in Indonesia suggests that Centralised funding for Indonesian mental health is only 1% of the national health budget and health expenditure is around only 3% of GDP.
+Air Quality Index (AQI): AQI is a measure of the air quality in a given location. It takes into account various pollutants in the air and provides a single numerical value that represents the overall air quality. The goal is to predict the AQI in the Tier-2 cities of Telangana to help residents and local authorities make informed decisions about air quality and health.
 
-Thus we are coming with an online free solution for self group therapy sessions named Sympathy.
-
-Well, what is  group therapy
-group therapy is a type of psychotherapy in which several people converse, express themselves, and motivate each other at the same time.
-
-Often we see that people who are shy and introvert are not confident enough to speak in public openly, but our platform ‘sympathy’ have one  special feature which allows the user to remain anonymous so that user can express themselves freely .
-
-Our platform provide you an online solution for your worries 
-It can give you an open environment to speak about your problems without revealing your identity
-
+The solution should be able to accurately predict both heat wave occurrences and AQI for the time frame January 2023 - December 2023 on a monthly basis, which can help to mitigate their impacts on public health and the environment.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
