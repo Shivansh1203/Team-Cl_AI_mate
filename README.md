@@ -91,7 +91,7 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 
 
-### Built With
+<!-- ### Built With
 
 * [![React][React.js]][React-url]
 * [![Express][Express.js]][Express-url]
@@ -102,12 +102,24 @@ The solution should be able to accurately predict both heat wave occurrences and
 * MongoDB
 * NodeJs
 * JavaScript
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## How to run the project on Streamlit
+
+### 1. Clone the repository or download the zip file in your machine.
+
+### 2. Give read and write permission to workflows in your repository from Settings-->General-->Actions
+
+### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements
+
+### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml
+
+### 5. Deploy the app in Streamlit
+
+Note- If you want to run on local environment first install the necessary libraries and then write the python "-m streamlit run app.py" command in your terminal. The site will be hosted on a local host.
 
 
 To get a local copy up and running follow these simple example steps.
