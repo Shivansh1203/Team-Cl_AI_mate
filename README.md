@@ -128,12 +128,10 @@ This is an example about our approach.
 
 * Step 1
 * Step 2
-* Step 2
-* Step 2
-* Step 2
+* Step 3
+* Step 4
+* Step 5
     
-See the [open issues](https://github.com/HarshHrs24/Sympathy_Garuda3.0) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
