@@ -107,25 +107,27 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 
 <!-- GETTING STARTED -->
-## How to run the project on Streamlit
+## How to run the project in 5 simple steps:
 
 ### 1. Clone the repository or download the zip file in your machine.
 
-### 2. Give read and write permission to workflows in your repository from Settings-->General-->Actions
+### 2. Give read and write permission to workflows in your repository from Settings-->General-->Actions.
 
-### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements
+### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements.
 
-### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml
+### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
 
-### 5. Deploy the app in Streamlit
+### 5. Deploy the app in Streamlit.
 
-Note- If you want to run on local environment first install the necessary libraries and then write the python following command in your terminal. The site will be hosted on a local host.
+Note- If you want to run on a local environment like VS Code first install the necessary libraries and then write the python following command in your terminal. The site will be hosted on a local host.
 ```sh
 -m streamlit run app.py
 ```
+To install all the libraries in the requirement.txt use the following command.
+```sh
+pip install -r requirements.txt 
+```
 
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
