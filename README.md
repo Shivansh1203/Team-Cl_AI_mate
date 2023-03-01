@@ -21,9 +21,9 @@
 
   <p align="center">
   <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
+  <h5><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Link »</strong></a></h5>
     <br />
-    <br />
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory data analysis (EDA) »</strong></a>
     <br />
   </p>
 </div>
@@ -65,9 +65,9 @@
 
 The problem statement asks you to build a solution to predict two environmental factors in the Tier-2 cities of the Indian state of Telangana:
 
-Heat Wave Occurrences: Heat waves are prolonged periods of excessively high temperatures, which can have severe impacts on public health and local ecosystems. The task is to develop a solution that can predict when heat waves will occur in the Tier-2 cities of Telangana, to make people aware of the future occurrence of the Heat wave.
+1. Heat Wave Occurrences: Heat waves are prolonged periods of excessively high temperatures, which can have severe impacts on public health and local ecosystems. The task is to develop a solution that can predict when heat waves will occur in the Tier-2 cities of Telangana, to make people aware of the future occurrence of the Heat wave.
 
-Air Quality Index (AQI): AQI is a measure of the air quality in a given location. It takes into account various pollutants in the air and provides a single numerical value that represents the overall air quality. The goal is to predict the AQI in the Tier-2 cities of Telangana to help residents and local authorities make informed decisions about air quality and health.
+2. Air Quality Index (AQI): AQI is a measure of the air quality in a given location. It takes into account various pollutants in the air and provides a single numerical value that represents the overall air quality. The goal is to predict the AQI in the Tier-2 cities of Telangana to help residents and local authorities make informed decisions about air quality and health.
 
 The solution should be able to accurately predict both heat wave occurrences and AQI for the time frame January 2023 - December 2023 on a monthly basis, which can help to mitigate their impacts on public health and the environment.
 
@@ -113,14 +113,14 @@ To install all the libraries in the requirement.txt use the following command.
 pip install -r requirements.txt 
 ```
 
+<!-- Screenshots -->
 
-### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+<!-- Approach -->
+## Our Approach
+
+This is an example about our approach.
+
 
 ### Installation
 
