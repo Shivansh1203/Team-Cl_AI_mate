@@ -102,7 +102,7 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements.
 
-<img src="https://drive.google.com/uc?export=view&id=18dcWvUPxwmtVG9hXbw-uTbvgyO_pYPnY" alt="Logo" width="1000" height="300">
+<img src="https://drive.google.com/uc?export=view&id=18dcWvUPxwmtVG9hXbw-uTbvgyO_pYPnY" alt="Logo" width="1100" height="250">
 
 ### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
 
