@@ -91,15 +91,15 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 2. Give read and write permission to workflows in your repository from Settings-->Actions-->General.
 
-<img src="https://drive.google.com/uc?export=view&id=1DiVD8e6t15xltalqrYWa3072FRGwEB9O" alt="Logo" width="600" height="300">
+<img src="https://drive.google.com/uc?export=view&id=1DiVD8e6t15xltalqrYWa3072FRGwEB9O" alt="Click and Reload" width="600" height="300">
 
 ### 3. Generate your own personal Github Token from your profile settings-->Developer Settings-->Generate classic token--> fill the necessary requirements.
 
-<img src="https://drive.google.com/uc?export=view&id=18dcWvUPxwmtVG9hXbw-uTbvgyO_pYPnY" alt="Logo" width="1100" height="250">
+<img src="https://drive.google.com/uc?export=view&id=18dcWvUPxwmtVG9hXbw-uTbvgyO_pYPnY" alt="Click and Reload" width="1100" height="250">
 
 ### 4. Copy paste the Github token in the GitHub workflow folder-->weekly-run.yaml.
 
-<img src="https://drive.google.com/uc?export=view&id=1qyEO2FDDxNJEpA_hz6QWcR3aJMxXnPKG" alt="Logo" width="600" height="100">
+<img src="https://drive.google.com/uc?export=view&id=1qyEO2FDDxNJEpA_hz6QWcR3aJMxXnPKG" alt="Click and Reload" width="600" height="100">
 
 ### 5. Deploy the app in Streamlit.
 
@@ -112,6 +112,7 @@ To install all the libraries in the requirement.txt use the following command.
 pip install -r requirements.txt 
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Screenshots -->
 
 
