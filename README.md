@@ -21,9 +21,10 @@
 
   <p align="center">
   <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
-  <h5><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Link »</strong></a></h5>
+  <h3><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Website Link »</strong></a></h3>
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) for Heat wave »</strong></a>
     <br />
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) »</strong></a>
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) AQI »</strong></a>
     <br />
   </p>
 </div>
