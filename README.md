@@ -3,12 +3,10 @@
 https://sonarcloud.io/summary/overall?id=examly-test_00aa9422-7c04-4b7c-975b-6ed887ff7d95
 <img src="https://drive.google.com/uc?export=view&id=1nFaRAWibLL1V4n13ATWZDanxMUr0b0Ba" alt=" " width="1010" height="100">
 
+
 <a name="readme-top"></a>
 <!--
 ***  T-AIM Academic Grand Challenge on Climate Change.
-
-
-
 
 
 <!-- PROJECT LOGO -->
@@ -46,7 +44,7 @@ https://sonarcloud.io/summary/overall?id=examly-test_00aa9422-7c04-4b7c-975b-6ed
       <a href="#how-to-run-the-project-in-5-simple-steps">How to run the project in 5 simple steps</a>
     </li>
     <li><a href="#our-approach">Our Approach</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#our-team">Our Team</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -91,7 +89,10 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 ### 5. Deploy the app in Streamlit.
 
-Note- If you want to run on a local environment like VS Code first install the necessary libraries and then write the python following command in your terminal. The site will be hosted on a local host.
+</br>
+
+## NOTE -
+If you want to run on a local environment like VS Code first install the necessary libraries and then write the following python command in your terminal. The site will be hosted on a local host.
 ```sh
 -m streamlit run app.py
 ```
@@ -114,14 +115,16 @@ This is an example about our approach.
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-* Step 1
-* Step 2
-* Step 3
-* Step 4
-* Step 5
+<!-- Features -->
+## Features
+* Forecasting of Heat wave and AQI along with its relevant parameters for the year 2023.
+* Graph Visualization and Analysis
+* Timeline - Highlights the major events in the year 2023 regarding occurence of Heat wave and severe Air Quality conditions.
+* The user can also choose a specific date to get the details about Heat waves and AQI
+* Polar Plot to analyse past year trends.
+* Map feature is also there on the site where the user can locate the selected city and get the details of all the necessary parameters related to Heat wave and AQI 
+* The model follows CI/CD architecture to constatntly retrain and make new versions of our model.
+* Cost-effective and effiecient business scalibility
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
