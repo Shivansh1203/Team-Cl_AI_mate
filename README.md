@@ -1,12 +1,10 @@
 # Team cl_AI_mate - Heat wave and AQI Prediction
+# 00aa9422-7c04-4b7c-975b-6ed887ff7d95
+https://sonarcloud.io/summary/overall?id=examly-test_00aa9422-7c04-4b7c-975b-6ed887ff7d95
+
 
 <img src="https://drive.google.com/uc?export=view&id=1nFaRAWibLL1V4n13ATWZDanxMUr0b0Ba" alt=" " width="1010" height="100">
 
-
-<!-- Improved compatibility of back to top link: See: https://github.com/HarshHrs24/Team-cl_AI_mate/pull/73 -->
-<a name="readme-top"></a>
-<!--
-***  T-AIM Academic Grand Challenge on Climate Change. 
 
 
 <!-- PROJECT LOGO -->
@@ -26,6 +24,8 @@
     <br />
     <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) AQI »</strong></a>
     <br />
+    <br />
+    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Complete Solution Architecture Documentation »</strong></a>
   </p>
 </div>
 
@@ -67,21 +67,6 @@ The solution should be able to accurately predict both heat wave occurrences and
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ### Built With
-
-* [![React][React.js]][React-url]
-* [![Express][Express.js]][Express-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-* WebRTC
-* Twilio
-* MongoDB
-* NodeJs
-* JavaScript
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -138,6 +123,40 @@ This is an example about our approach.
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Built With
+
+### Technology Used                                                                  
+* Python
+* Streamlit
+* Google Colab
+* JSON
+* GitHub
+* VS Code
+* Yaml
+* Postman API
+* CSS
+* Excel
+
+### Libraries Used
+* streamlit
+* streamlit_lottie
+* requests
+* Pillow
+* protobuf
+* watchdog
+* pandas
+* numpy
+* prophet
+* matplotlib
+* scikit-learn
+* plotly
+* folium
+* geopandas
+* streamlit-vis-timeline
+* datetime
+* smtplib
+* shapely.geometry
 
 
 <!-- CONTACT -->
