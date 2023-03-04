@@ -22,12 +22,12 @@ https://sonarcloud.io/summary/overall?id=examly-test_00aa9422-7c04-4b7c-975b-6ed
   <p align="center">
   <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
   <h3><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Website Link »</strong></a></h3>
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) for Heat wave »</strong></a>
+    <a href="https://colab.research.google.com/drive/1xH77_KLE3gpmTxGk9-X36Pj6lHee0iBc?usp=sharing#scrollTo=1ExcTb2-2C29"><strong>Exploratory Data Analysis (EDA) for Heat wave »</strong></a>
     <br />
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Exploratory Data Analysis (EDA) for AQI »</strong></a>
+    <a href="https://colab.research.google.com/drive/1WgV57xtbG05shrxy47Fw59oOmzTZ2yJv?usp=sharing"><strong>Exploratory Data Analysis (EDA) for AQI »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/HarshHrs24/Team-cl_AI_mate"><strong>Complete Solution Architecture Documentation »</strong></a>
+    <a href="https://www.craft.do/s/1eTduABsPuFIDX"><strong>Complete Solution Architecture Documentation »</strong></a>
   </p>
 </div>
 
@@ -45,6 +45,7 @@ https://sonarcloud.io/summary/overall?id=examly-test_00aa9422-7c04-4b7c-975b-6ed
     </li>
     <li><a href="#our-approach">Our Approach</a></li>
     <li><a href="#features">Features</a></li>
+    <li><a href="#file-structure">File Structure</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#our-team">Our Team</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -108,7 +109,17 @@ pip install -r requirements.txt
 <!-- Approach -->
 ## Our Approach
 
-This is an example about our approach.
+The proposed solution architecture for the project based on the heat wave and AQI prediction for tier-2 cities of Telangana on a monthly basis from Jan 2023 to Dec 2023 is designed to provide an interactive dashboard with various features. The platform is scalable and business-adaptable, making it an efficient solution for the heatwave and AQI prediction.
+
+Our platform provides forecasting for Heat wave and Air Quality Index (AQI) along with their relevant parameters for the year 2023. It offers graph visualization and analysis, highlighting major events in the year 2023 regarding the occurrence of Heat wave and severe Air Quality conditions. Users can select a specific date in 2023 to get details about temperature and AQI. The system also provides a Polar Plot to analyze past year trends and a Map feature to locate a city and get details about all necessary parameters related to Heat wave and AQI. The system follows a CI/CD architecture to constantly retrain and create new versions of the model, making it cost-effective and efficient for business scalability.
+
+The sliding window approach used in this system involves dividing the latest month's data into four weekly windows, labeled "one" to "four". Each window contains two subfolders, "Heat wave" and "AQI," which contain the relevant raw dataset, ML model, and prediction/forecast dataset for that specific week. This approach enables the system to keep track of the latest available data and update the ML models accordingly.
+
+To ensure that the ML models remain current, the system regularly retrains them with the latest available data. Whenever a new dataset becomes available, the raw dataset is updated, and the ML model is retrained. The content of the folder labeled "four" is then replaced by the content of the folder labeled "three," which is in turn replaced by the content of the folder labeled "two," and so on. The most recent raw dataset, ML model, and prediction/forecast dataset are then placed in the folder labeled "one". This versioning process occurs weekly, ensuring that the models are always based on the latest available data.
+
+The system maintains a log file for these four different versions, which contains key performance indicators (KPIs) such as RMSE. These KPIs are used to compare the different versions of the ML models, and the best-performing model and prediction/forecast dataset are stored in the "winner" folder. This folder is used for forecasting heatwave and AQI, and it ensures that the system always uses the best-performing model for forecasting.
+
+The system also implements CI/CD using Retraining and Versioning and streamlit for deployment. This allows the system to deploy the ML models without relying on expensive cloud services, making it a cost-effective way of improving the accuracy of the predictions.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -118,16 +129,19 @@ This is an example about our approach.
 <!-- Features -->
 ## Features
 * Forecasting of Heat wave and AQI along with its relevant parameters for the year 2023.
-* Graph Visualization and Analysis
+* Graph Visualization and Analysis.
 * Timeline - Highlights the major events in the year 2023 regarding occurence of Heat wave and severe Air Quality conditions.
 * The user can also choose a specific date in the year 2023 to get the details about temperature and AQI. 
 * Polar Plot to analyse past year trends.
-* Map feature is also there on the site where the user can locate the selected city and get the details of all the necessary parameters related to Heat wave and AQI 
+* Map feature is also there on the site where the user can locate the selected city and get the details of all the necessary parameters related to Heat wave and AQI. 
 * The model follows CI/CD architecture to constatntly retrain and make new versions of our model.
-* Cost-effective and efficient business scalibility
+* Cost-effective and efficient business scalibility.
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## File Structure
+ <img src="https://drive.google.com/uc?export=view&id=1BvXYscxxBb7qNzeHKNAostTqjh4ym_Os" alt="Logo" width="900" height="600">
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Built With
 
