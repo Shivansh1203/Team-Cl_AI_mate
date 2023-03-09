@@ -9,13 +9,14 @@ pandas
 numpy
 prophet
 matplotlib
-sklearn
 scikit-learn
 plotly
 streamlit_folium
 folium
 geopandas
+PyMuPDF
 streamlit-vis-timeline
+# streamlit-timeline
 # smtplib
 
 
