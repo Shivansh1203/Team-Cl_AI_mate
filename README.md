@@ -20,7 +20,7 @@
 
   <p align="center">
   <h4>T-AIM Academic Grand Challenge on Climate Change</h4> 
-  <h3><a href="https://harshhrs24-team-cl-ai-mate-app-md7w7w.streamlit.app/"><strong>Deployed Website Link »</strong></a></h3>
+  <h3><a href="https://shivansh1203-team-cl-ai-mate-app-3rvkft.streamlit.app/"><strong>Deployed Website Link »</strong></a></h3>
     <a href="https://colab.research.google.com/drive/1xH77_KLE3gpmTxGk9-X36Pj6lHee0iBc?usp=sharing#scrollTo=1ExcTb2-2C29"><strong>Exploratory Data Analysis (EDA) for Heat wave »</strong></a>
     <br />
     <a href="https://colab.research.google.com/drive/1WgV57xtbG05shrxy47Fw59oOmzTZ2yJv?usp=sharing"><strong>Exploratory Data Analysis (EDA) for AQI »</strong></a>
